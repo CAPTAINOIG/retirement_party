@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --gold-primary: #F1C40F;
+  --gold-light: #F4D03F;
+  --gold-dim: #B8960A;
+  --dark-base: #070708;
+  --dark-surface: #111113;
+  --dark-elevated: #1C1C1F;
+  --dark-border: rgba(255,255,255,0.07);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--dark-base);
+  color: #E8E8E8;
+  overflow-x: hidden;
+}
+
+.font-serif { font-family: 'Playfair Display', Georgia, serif; }
+
+.text-gradient {
+  background: linear-gradient(135deg, #F1C40F 0%, #FDEAA0 50%, #F1C40F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-underline {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+.gold-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, #F1C40F 30%, #F4D03F 70%, transparent 100%);
+  border-radius: 2px;
+}
+
+.marquee-track {
+  overflow: hidden;
+  position: relative;
+}
+.marquee-track::before,
+.marquee-track::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+.marquee-track::before {
+  left: 0;
+  background: linear-gradient(to right, #111113 0%, transparent 100%);
+}
+.marquee-track::after {
+  right: 0;
+  background: linear-gradient(to left, #111113 0%, transparent 100%);
+}
+.marquee-inner {
+  display: flex;
+  animation: marquee-scroll 55s linear infinite;
+  will-change: transform;
+  width: max-content;
+}
+.marquee-inner:hover { animation-play-state: paused; }
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.07);
+}
+.glass-gold {
+  background: rgba(241, 196, 15, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(241, 196, 15, 0.18);
+}
+
+/* ─── Hover Lift ────────────────────────────────────────────────── */
+.hover-lift {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.35s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(0,0,0,0.45), 0 0 0 1px rgba(241,196,15,0.12);
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+}
+@keyframes orb-pulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(1.1); }
+}
+.orb-pulse { animation: orb-pulse 9s ease-in-out infinite; }
+
+/* ─── Eyebrow ───────────────────────────────────────────────────── */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #F1C40F;
+}
+.eyebrow::before,
+.eyebrow::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.5;
+}
+
+.num-badge {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(241,196,15,0.18);
+  user-select: none;
+}
+
+.icon-ring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(241,196,15,0.08);
+  border: 1px solid rgba(241,196,15,0.22);
+  flex-shrink: 0;
+}
+
+@keyframes bounce-y {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(8px); }
+}
+.bounce-y { animation: bounce-y 1.8s ease-in-out infinite; }
+
+.field-wrap { position: relative; }
+.field-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 8px;
+  transition: color 0.2s;
+}
+.field-wrap:focus-within .field-label { color: #F1C40F; }
+.field-input {
+  width: 100%;
+  padding: 14px 16px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 10px;
+  color: #E8E8E8;
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  transition: border-color 0.25s, background 0.25s, box-shadow 0.25s;
+  outline: none;
+}
+.field-input:focus {
+  border-color: rgba(241,196,15,0.45);
+  background: rgba(241,196,15,0.03);
+  box-shadow: 0 0 0 3px rgba(241,196,15,0.08);
+}
+.field-input.field-error-state { border-color: rgba(239,68,68,0.5); }
+.field-input::placeholder { color: #444; }
+.field-error-msg { font-size: 0.78rem; color: #F87171; margin-top: 5px; display: block; }
+
+/* Select */
+select.field-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F1C40F' stroke-width='2'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+  padding-right: 44px;
+  cursor: pointer;
+}
+select.field-input option {
+  background-color: #1C1C1F;
+  color: #E8E8E8;
+}
+select.field-input::-ms-expand { display: none; }
+
+.bg-base    { background-color: #070708; }
+.bg-surface { background-color: #111113; }
+.bg-elevated{ background-color: #1C1C1F; }
