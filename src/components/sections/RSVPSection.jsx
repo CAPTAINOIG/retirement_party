@@ -71,7 +71,7 @@ const RSVPSection = () => {
           <h2 className="font-serif text-4xl md:text-5xl text-white mb-4">
             Reserve your seat.
           </h2>
-          <p className="text-gray-400 text-base leading-relaxed max-w-sm mx-auto">
+          <p className="text-gray-200 text-base leading-relaxed max-w-sm mx-auto">
             Every guest is reviewed personally. RSVPs receive venue details,
             Event Invite and a small package before the event.
           </p>
@@ -108,7 +108,7 @@ const RSVPSection = () => {
                   <h3 className="font-serif text-3xl text-white mb-3">
                     Your seat is reserved.
                   </h3>
-                  <p className="text-gray-400 text-base leading-relaxed max-w-xs mx-auto mb-6">
+                  <p className="text-gray-200 text-base leading-relaxed max-w-xs mx-auto mb-6">
                     We'll review your RSVP and confirm within 48 hours. Watch your inbox.
                   </p>
                   <p className="text-xs tracking-widest uppercase text-gold-600">

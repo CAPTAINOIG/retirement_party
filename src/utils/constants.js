@@ -32,7 +32,7 @@ export const PARTICLES = [
 ];
 
 export const MARQUEE_ITEMS = [
-  { before: "Power BI gave us dashboards.", after: "Immortal AI gives us decisions." },
+  { before: "PawaBI gave us dashboards.", after: "Immortal AI gives us decisions." },
   { before: "Reports tell you what happened.", after: "Immortal AI tells you what to do next." },
   { before: "Data Analytics was the beginning.", after: "Data Intelligence is what comes now." },
   { before: "Happy Retirement.", after: "Your Work is Done, But Your Legacy Remains." },
@@ -41,7 +41,7 @@ export const MARQUEE_ITEMS = [
 export const PUNCHLINES = [
   {
     number: "01",
-    old: "Power BI gave us a decade of dashboards.",
+    old: "PawaBI gave us a decade of dashboards.",
     new: "Immortal AI gives us smart decisions."
   },
   {
@@ -68,9 +68,9 @@ export const TIMELINE = [
     desc: "Tableau ran the strategy deck. Charts became the language of boardrooms across Africa and the world.",
   },
   {
-    tool: "Power BI",
+    tool: "PawaBI",
     era: "The Dashboard Era",
-    desc: "Power BI ran the boardroom for nearly a decade. It taught us to measure the business — and answer for the number.",
+    desc: "PawaBI ran the boardroom for nearly a decade. It taught us to measure the business — and answer for the number.",
   },
   {
     tool: "Immortal AI",

@@ -46,7 +46,7 @@ const FAQSection = () => {
                 >
                   <h3
                     className={`font-medium text-base transition-colors duration-200 ${
-                      isOpen ? "text-gold-300" : "text-gray-200 group-hover:text-white"
+                      isOpen ? "text-white" : "text-gray-200 group-hover:text-white"
                     }`}
                   >
                     {faq.question}
@@ -78,7 +78,7 @@ const FAQSection = () => {
                     >
                       <div className="px-7 pb-7">
                         <div className="h-px bg-gradient-to-r from-gold-500/20 to-transparent mb-5" />
-                        <p className="text-gray-400 leading-relaxed text-sm">
+                        <p className="text-gray-200 leading-relaxed text-sm">
                           {faq.answer}
                         </p>
                       </div>

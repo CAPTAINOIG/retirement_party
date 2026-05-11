@@ -60,7 +60,7 @@ const GuestListSection = () => (
             <h3 className="font-serif text-lg font-semibold text-white leading-snug">
               {guest.title}
             </h3>
-            <p className="text-sm text-gray-500 leading-relaxed flex-1">
+            <p className="text-sm text-gray-300 leading-relaxed flex-1">
               {guest.description}
             </p>
             <div className="h-px bg-gradient-to-r from-gold-500/0 via-gold-500/20 to-gold-500/0 mt-2 group-hover:via-gold-500/40 transition-all duration-500" />

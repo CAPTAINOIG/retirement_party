@@ -38,7 +38,7 @@ const FinalCTASection = () => {
             <span className="italic text-gray-400 font-light">begins in Lagos.</span>
           </h2>
 
-          <p className="text-gray-400 text-xl mb-12 leading-relaxed">
+          <p className="text-gray-200 text-xl mb-12 leading-relaxed">
             One thousand seats. One night.{" "}
             <span className="text-gray-300">Be in the room when the handover happens.</span>
           </p>

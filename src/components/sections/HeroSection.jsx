@@ -18,24 +18,24 @@ const HeroSection = () => {
         <div
           className="orb orb-pulse"
           style={{ width: 600, height: 600, top: "-15%", left: "-10%",
-            background: "radial-gradient(circle, rgba(241,196,15,0.12) 0%, transparent 70%)" }}
+            background: "radial-gradient(circle, rgba(27,110,243,0.13) 0%, transparent 70%)" }}
         />
         <div
           className="orb orb-pulse"
           style={{ width: 500, height: 500, bottom: "-10%", right: "-8%", animationDelay: "3s",
-            background: "radial-gradient(circle, rgba(241,196,15,0.09) 0%, transparent 70%)" }}
+            background: "radial-gradient(circle, rgba(27,110,243,0.09) 0%, transparent 70%)" }}
         />
         <div
           className="orb orb-pulse"
           style={{ width: 300, height: 300, top: "50%", left: "50%", transform: "translate(-50%,-50%)", animationDelay: "1.5s",
-            background: "radial-gradient(circle, rgba(180,140,10,0.06) 0%, transparent 70%)" }}
+            background: "radial-gradient(circle, rgba(21,87,204,0.06) 0%, transparent 70%)" }}
         />
         <div
-          className="absolute inset-0 opacity-[0.025]"
+          className="absolute inset-0 opacity-[0.02]"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(241,196,15,0.5) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(241,196,15,0.5) 1px, transparent 1px)
+              linear-gradient(rgba(27,110,243,0.5) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(27,110,243,0.5) 1px, transparent 1px)
             `,
             backgroundSize: "60px 60px",
           }}
@@ -64,22 +64,22 @@ const HeroSection = () => {
         </motion.div>
 
         <motion.h1
-          className="font-serif mb-10 leading-[1.15]"
+          className="font-serif mb-10 leading-[1.1] tracking-tight"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <span className="block text-4xl sm:text-5xl lg:text-[3.8rem] italic text-gray-400 font-light mb-3">
-            Power BI gave us a decade of dashboards.
+          <span className="block text-4xl sm:text-5xl lg:text-[3.8rem] font-bold text-gray-300 mb-3">
+            Pawa BI gave us a decade of dashboards.
           </span>
-          <span className="block text-4xl sm:text-5xl lg:text-[3.8rem] font-bold text-white">
+          <span className="block text-4xl sm:text-5xl lg:text-[3.8rem] font-extrabold text-white">
             Immortal AI gives us{" "}
             <span className="gold-underline text-gold-400">decisions</span>.
           </span>
         </motion.h1>
 
         <motion.p
-          className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed font-light"
+          className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto mb-12 leading-relaxed"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.65 }}
@@ -100,8 +100,8 @@ const HeroSection = () => {
         >
           <motion.button
             onClick={scrollToRSVP}
-            className="px-9 py-4 text-sm font-bold tracking-widest uppercase bg-gold-500 text-dark-950 rounded-xl hover:bg-gold-400 transition-colors duration-200 shadow-[0_0_32px_rgba(241,196,15,0.25)]"
-            whileHover={{ scale: 1.03, boxShadow: "0 0 48px rgba(241,196,15,0.4)" }}
+            className="px-9 py-4 text-sm font-bold tracking-widest uppercase bg-gold-500 text-dark-950 rounded-xl hover:bg-gold-400 transition-colors duration-200 shadow-[0_0_32px_rgba(27,110,243,0.28)]"
+            whileHover={{ scale: 1.03, boxShadow: "0 0 48px rgba(27,110,243,0.45)" }}
             whileTap={{ scale: 0.97 }}
           >
             Reserve My Seat →

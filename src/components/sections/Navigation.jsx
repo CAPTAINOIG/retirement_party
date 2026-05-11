@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { EVENT_INFO, NAVIGATION_ITEMS } from "../../utils/constants";
+import statisenseLogo from "../../assets/statisense.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,13 +35,16 @@ const Navigation = () => {
           <div className="flex justify-between items-center h-[68px]">
             <button
               onClick={() => scrollToSection("hero")}
-              className="flex flex-col items-start group focus:outline-none"
+              className="flex items-center gap-2.5 focus:outline-none group"
+              aria-label="Go to top"
             >
-              <span className="font-serif text-base font-semibold text-gold-400 tracking-wide leading-tight group-hover:text-gold-300 transition-colors duration-200">
-                {EVENT_INFO.title}
-              </span>
-              <span className="text-[10px] tracking-[0.18em] text-gray-500 uppercase leading-none mt-0.5">
-                {EVENT_INFO.subtitle}
+              <img
+                src={statisenseLogo}
+                alt="Statisense"
+                className="h-8 w-8 object-contain flex-shrink-0"
+              />
+              <span className="text-white font-bold text-base tracking-tight leading-none">
+                statisense
               </span>
             </button>
 
@@ -49,7 +53,7 @@ const Navigation = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-[0.75rem] font-semibold tracking-[0.14em] uppercase text-gray-400 hover:text-gold-400 transition-colors duration-200 focus:outline-none"
+                  className="text-[0.75rem] font-semibold tracking-[0.14em] uppercase text-white/70 hover:text-white transition-colors duration-200 focus:outline-none"
                 >
                   {item.label}
                 </button>
@@ -112,7 +116,7 @@ const Navigation = () => {
                 <motion.button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="font-serif text-3xl text-gray-200 hover:text-gold-400 transition-colors"
+                  className="font-bold text-3xl text-white/80 hover:text-white transition-colors"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.08 }}
