@@ -50,7 +50,7 @@ const RSVPSection = () => {
     <section id="rsvp" className="relative py-28 px-5 bg-dark-800 overflow-hidden">
       <div
         className="orb orb-pulse absolute left-1/2 -translate-x-1/2 -top-20 w-[700px] h-[350px] pointer-events-none"
-        style={{ background: "radial-gradient(ellipse, rgba(241,196,15,0.07) 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(ellipse, rgba(6,182,212,0.07) 0%, transparent 70%)" }}
       />
 
       <div className="relative z-10 max-w-xl mx-auto">
@@ -62,11 +62,11 @@ const RSVPSection = () => {
           viewport={{ once: true }}
         >
           <div className="flex items-center justify-center gap-2 mb-5">
-            <StarIcon className="w-3 h-3 text-gold-500" />
-            <span className="text-[0.68rem] font-bold tracking-[0.22em] uppercase text-gold-500">
+            <StarIcon className="w-3 h-3 text-primary-500" />
+            <span className="text-[0.68rem] font-bold tracking-[0.22em] uppercase text-primary-500">
               RSVP · Free · Limited
             </span>
-            <StarIcon className="w-3 h-3 text-gold-500" />
+            <StarIcon className="w-3 h-3 text-primary-500" />
           </div>
           <h2 className="font-serif text-4xl md:text-5xl text-white mb-4">
             Reserve your seat.
@@ -84,7 +84,7 @@ const RSVPSection = () => {
           transition={{ duration: 0.7, delay: 0.15 }}
           viewport={{ once: true }}
         >
-          <div className="absolute inset-0 rounded-2xl p-px bg-gradient-to-br from-gold-500/30 via-transparent to-gold-500/10 pointer-events-none z-10" />
+          <div className="absolute inset-0 rounded-2xl p-px bg-gradient-to-br from-primary-500/30 via-transparent to-primary-500/10 pointer-events-none z-10" />
 
           <div className="relative bg-dark-700/60 backdrop-blur-xl rounded-2xl p-8 sm:p-10">
             <AnimatePresence mode="wait">
@@ -103,7 +103,7 @@ const RSVPSection = () => {
                     animate={{ scale: 1 }}
                     transition={{ type: "spring", stiffness: 260, damping: 18, delay: 0.1 }}
                   >
-                    <CheckCircleIcon className="w-16 h-16 text-gold-400" />
+                    <CheckCircleIcon className="w-16 h-16 text-primary-400" />
                   </motion.div>
                   <h3 className="font-serif text-3xl text-white mb-3">
                     Your seat is reserved.
@@ -111,7 +111,7 @@ const RSVPSection = () => {
                   <p className="text-gray-200 text-base leading-relaxed max-w-xs mx-auto mb-6">
                     We'll review your RSVP and confirm within 48 hours. Watch your inbox.
                   </p>
-                  <p className="text-xs tracking-widest uppercase text-gold-600">
+                  <p className="text-xs tracking-widest uppercase text-primary-600">
                     The Retirement Party · Lagos · 10 July 2026
                   </p>
                 </motion.div>
@@ -169,15 +169,15 @@ const RSVPSection = () => {
                     disabled={isSubmitting}
                     className={`w-full py-4 rounded-xl text-sm font-bold tracking-widest uppercase transition-all duration-200 mt-2 ${
                       isSubmitting
-                        ? "bg-gold-700 text-dark-950 cursor-not-allowed opacity-60"
-                        : "bg-gold-500 text-dark-950 hover:bg-gold-400 shadow-[0_0_32px_rgba(241,196,15,0.2)] hover:shadow-[0_0_48px_rgba(241,196,15,0.4)]"
+                        ? "bg-primary-700 text-white cursor-not-allowed opacity-60"
+                        : "bg-primary-500 text-white hover:bg-primary-400 shadow-[0_0_32px_rgba(6,182,212,0.2)] hover:shadow-[0_0_48px_rgba(6,182,212,0.4)]"
                     }`}
                     whileHover={!isSubmitting ? { scale: 1.01 } : {}}
                     whileTap={!isSubmitting ? { scale: 0.99 } : {}}
                   >
                     {isSubmitting ? (
                       <span className="flex items-center justify-center gap-3">
-                        <span className="w-4 h-4 border-2 border-dark-950 border-t-transparent rounded-full animate-spin" />
+                        <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
                         Submitting…
                       </span>
                     ) : (
@@ -203,7 +203,7 @@ const FieldInput = ({ field, value, onChange, error }) => (
     <label htmlFor={field.name} className="field-label">
       {field.label}
       {field.name !== "hearAbout" && (
-        <span className="text-gold-600 ml-0.5">*</span>
+        <span className="text-primary-600 ml-0.5">*</span>
       )}
     </label>
     <input

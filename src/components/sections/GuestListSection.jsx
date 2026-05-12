@@ -22,7 +22,7 @@ const GuestListSection = () => (
   <section id="guest-list" className="relative py-28 px-5 bg-dark-950 overflow-hidden">
     <div
       className="orb orb-pulse absolute -left-32 top-1/4 w-96 h-96 pointer-events-none"
-      style={{ background: "radial-gradient(circle, rgba(241,196,15,0.07) 0%, transparent 70%)" }}
+      style={{ background: "radial-gradient(circle, rgba(6,182,212,0.07) 0%, transparent 70%)" }}
     />
 
     <div className="relative z-10 max-w-6xl mx-auto">
@@ -49,12 +49,12 @@ const GuestListSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: i * 0.1 }}
             viewport={{ once: true, margin: "-50px" }}
-            whileHover={{ borderColor: "rgba(241,196,15,0.2)" }}
+            whileHover={{ borderColor: "rgba(6,182,212,0.2)" }}
           >
-            <span className="absolute top-5 right-6 font-serif text-3xl text-gold-500/10 font-bold select-none">
+            <span className="absolute top-5 right-6 font-serif text-3xl text-primary-500/10 font-bold select-none">
               {ROMAN[i]}
             </span>
-            <div className="icon-ring text-gold-400">
+            <div className="icon-ring text-primary-400">
               {ICONS[i]}
             </div>
             <h3 className="font-serif text-lg font-semibold text-white leading-snug">
@@ -63,7 +63,7 @@ const GuestListSection = () => (
             <p className="text-sm text-gray-300 leading-relaxed flex-1">
               {guest.description}
             </p>
-            <div className="h-px bg-gradient-to-r from-gold-500/0 via-gold-500/20 to-gold-500/0 mt-2 group-hover:via-gold-500/40 transition-all duration-500" />
+            <div className="h-px bg-gradient-to-r from-primary-500/0 via-primary-500/20 to-primary-500/0 mt-2 group-hover:via-primary-500/40 transition-all duration-500" />
           </motion.div>
         ))}
       </div>

@@ -20,10 +20,10 @@ const Button = forwardRef(
 
     const variants = {
       primary:
-        "bg-gold-500 text-dark-900 hover:bg-gold-400 focus:ring-gold-500",
+        "bg-blue-500 text-white hover:bg-cyan-400 focus:ring-blue-500",
       secondary:
-        "border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-dark-900 focus:ring-gold-500",
-      ghost: "text-gray-300 hover:text-gold-400 focus:ring-gray-500",
+        "border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white focus:ring-cyan-400",
+      ghost: "text-gray-300 hover:text-cyan-400 focus:ring-gray-500",
     };
 
     const sizes = {

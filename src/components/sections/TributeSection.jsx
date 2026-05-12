@@ -39,7 +39,7 @@ const TributeSection = () => (
       </motion.div>
 
       <div className="relative">
-        <div className="absolute left-[calc(2rem)] md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-gold-500/10 via-gold-500/30 to-gold-500/10 -translate-x-1/2" />
+        <div className="absolute left-[calc(2rem)] md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary-500/10 via-primary-500/30 to-primary-500/10 -translate-x-1/2" />
         <div className="space-y-12">
           {TIMELINE.map((item, i) => {
             const isRight = i % 2 === 0;
@@ -56,8 +56,8 @@ const TributeSection = () => (
                   <div
                     className={`w-4 h-4 rounded-full border-2 ${
                       item.isNew
-                        ? "border-gold-400 bg-gold-500 shadow-[0_0_16px_rgba(241,196,15,0.6)]"
-                        : "border-gold-600/50 bg-dark-700"
+                        ? "border-cyan-400 bg-blue-500 shadow-[0_0_16px_rgba(34,211,238,0.6)]"
+                        : "border-primary-600/50 bg-dark-700"
                     }`}
                   />
                 </div>
@@ -68,20 +68,20 @@ const TributeSection = () => (
                   }`}
                 >
                   <div
-                    className={`p-6 rounded-2xl border transition-all duration-300 hover-lift ${
-                      item.isNew ? "glass-gold" : "glass"
+                      className={`p-6 rounded-2xl border transition-all duration-300 hover-lift ${
+                      item.isNew ? "glass-primary" : "glass"
                     }`}
                   >
                     <div className="flex items-center gap-3 mb-3">
                       <span
                         className={`text-2xl font-serif font-bold ${
-                          item.isNew ? "text-gold-400" : "text-gray-500"
+                          item.isNew ? "text-cyan-400" : "text-gray-500"
                         }`}
                       >
                         {item.tool}
                       </span>
                       {item.isNew && (
-                        <span className="text-[10px] font-bold tracking-widest uppercase px-2 py-0.5 rounded-full bg-gold-500/10 text-gold-400 border border-gold-500/20">
+                        <span className="text-[10px] font-bold tracking-widest uppercase px-2 py-0.5 rounded-full bg-blue-500/10 text-cyan-400 border border-blue-500/20">
                           Now
                         </span>
                       )}
@@ -108,7 +108,7 @@ const TributeSection = () => (
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
       >
-        <p className="font-bold text-xl text-gray-200 leading-relaxed">
+        <p className="font-bold text-xl sm:text-2xl text-gray-200 leading-relaxed">
           "On July 10th in Lagos, we are throwing the tools that built the
           legacy Business Intelligence a proper retirement party. You are
           invited to the handover."

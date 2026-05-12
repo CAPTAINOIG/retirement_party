@@ -5,7 +5,7 @@ const PunchlineSection = () => (
   <section className="relative py-28 px-5 bg-dark-800 overflow-hidden">
     <div
       className="orb orb-pulse absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-[600px] h-[300px] pointer-events-none"
-      style={{ background: "radial-gradient(ellipse, rgba(241,196,15,0.05) 0%, transparent 70%)" }}
+      style={{ background: "radial-gradient(ellipse, rgba(6,182,212,0.05) 0%, transparent 70%)" }}
     />
 
     <div className="relative z-10 max-w-6xl mx-auto">
@@ -31,7 +31,7 @@ const PunchlineSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: i * 0.12 }}
             viewport={{ once: true, margin: "-50px" }}
-            whileHover={{ borderColor: "rgba(241,196,15,0.18)" }}
+            whileHover={{ borderColor: "rgba(6,182,212,0.18)" }}
           >
             <div className="num-badge mb-6 select-none">
               {item.number}
@@ -40,13 +40,13 @@ const PunchlineSection = () => (
               {item.old}
             </p>
             <div className="flex items-center gap-2 mb-3">
-              <div className="h-px flex-1 bg-gradient-to-r from-gold-500/40 to-transparent" />
-              <span className="text-gold-500 text-lg">→</span>
+              <div className="h-px flex-1 bg-gradient-to-r from-primary-500/40 to-transparent" />
+              <span className="text-primary-500 text-lg">→</span>
             </div>
             <p className="text-white font-semibold text-base leading-relaxed">
               {item.new}
             </p>
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-gold-500/0 to-gold-500/0 group-hover:from-gold-500/[0.03] group-hover:to-gold-500/[0.06] transition-all duration-500 pointer-events-none" />
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary-500/0 to-primary-500/0 group-hover:from-primary-500/[0.03] group-hover:to-primary-500/[0.06] transition-all duration-500 pointer-events-none" />
           </motion.div>
         ))}
       </div>

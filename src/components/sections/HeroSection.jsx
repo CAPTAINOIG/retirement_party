@@ -46,7 +46,7 @@ const HeroSection = () => {
       {PARTICLES.map((p, i) => (
         <motion.div
           key={i}
-          className="absolute rounded-full bg-gold-500"
+          className="absolute rounded-full bg-cyan-400"
           style={{ left: p.left, top: p.top, width: 3, height: 3 }}
           animate={{ y: [0, -20, 0], opacity: [0.15, 0.7, 0.15] }}
           transition={{ duration: 4 + i * 0.3, repeat: Infinity, delay: p.delay, ease: "easeInOut" }}
@@ -74,7 +74,7 @@ const HeroSection = () => {
           </span>
           <span className="block text-4xl sm:text-5xl lg:text-[3.8rem] font-extrabold text-white">
             Immortal AI gives us{" "}
-            <span className="gold-underline text-gold-400">decisions</span>.
+            <span className="primary-underline text-cyan-400">decisions</span>.
           </span>
         </motion.h1>
 
@@ -100,8 +100,8 @@ const HeroSection = () => {
         >
           <motion.button
             onClick={scrollToRSVP}
-            className="px-9 py-4 text-sm font-bold tracking-widest uppercase bg-gold-500 text-dark-950 rounded-xl hover:bg-gold-400 transition-colors duration-200 shadow-[0_0_32px_rgba(27,110,243,0.28)]"
-            whileHover={{ scale: 1.03, boxShadow: "0 0 48px rgba(27,110,243,0.45)" }}
+            className="px-9 py-4 text-sm font-bold tracking-widest uppercase bg-blue-500 text-white rounded-xl hover:bg-cyan-400 transition-colors duration-200 shadow-[0_0_32px_rgba(34,211,238,0.28)]"
+            whileHover={{ scale: 1.03, boxShadow: "0 0 48px rgba(34,211,238,0.45)" }}
             whileTap={{ scale: 0.97 }}
           >
             Reserve My Seat →
@@ -109,7 +109,7 @@ const HeroSection = () => {
 
           <motion.button
             onClick={scrollToAbout}
-            className="px-9 py-4 text-sm font-bold tracking-widest uppercase border border-gold-500/30 text-gold-400 rounded-xl hover:border-gold-500/60 hover:bg-gold-500/5 transition-all duration-200"
+            className="px-9 py-4 text-sm font-bold tracking-widest uppercase border border-cyan-400/30 text-cyan-400 rounded-xl hover:border-cyan-400/60 hover:bg-cyan-400/5 transition-all duration-200"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
           >
@@ -118,13 +118,13 @@ const HeroSection = () => {
         </motion.div>
 
         <motion.div
-          className="flex items-center justify-center gap-2 text-gold-500"
+          className="flex items-center justify-center gap-2 text-cyan-400"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 1.05 }}
         >
           <StarIcon className="w-3 h-3" />
-          <span className="text-xs font-semibold tracking-[0.2em] uppercase text-gold-600">
+          <span className="text-xs font-semibold tracking-[0.2em] uppercase text-cyan-500">
             Curated guest list · 1,000 seats · No walk-ins
           </span>
           <StarIcon className="w-3 h-3" />

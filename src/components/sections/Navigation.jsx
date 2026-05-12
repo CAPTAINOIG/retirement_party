@@ -63,7 +63,7 @@ const Navigation = () => {
             <div className="flex items-center gap-3">
               <motion.button
                 onClick={() => scrollToSection("rsvp")}
-                className="hidden sm:flex items-center gap-2 px-5 py-2.5 text-[0.75rem] font-bold tracking-[0.1em] uppercase bg-gold-500 text-dark-950 rounded-lg hover:bg-gold-400 transition-colors duration-200 focus:outline-none"
+                className="bg-white hidden sm:flex items-center gap-2 px-5 py-2.5 text-[0.75rem] font-bold tracking-[0.1em] text-black rounded-full hover:bg-cyan-400 transition-colors duration-200 focus:outline-none"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
@@ -72,7 +72,7 @@ const Navigation = () => {
               </motion.button>
 
               <button
-                className="md:hidden text-gray-300 hover:text-gold-400 transition-colors focus:outline-none"
+                className="md:hidden text-gray-300 hover:text-cyan-400 transition-colors focus:outline-none"
                 onClick={() => setMobileOpen(!mobileOpen)}
                 aria-label="Toggle menu"
               >
@@ -126,7 +126,7 @@ const Navigation = () => {
               ))}
               <motion.button
                 onClick={() => scrollToSection("rsvp")}
-                className="mt-4 px-8 py-3 bg-gold-500 text-dark-950 font-bold rounded-lg text-sm tracking-wider uppercase hover:bg-gold-400 transition-colors"
+                className="mt-4 px-8 py-3 bg-blue-500 text-white font-bold rounded-lg text-sm tracking-wider uppercase hover:bg-cyan-400 transition-colors"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}

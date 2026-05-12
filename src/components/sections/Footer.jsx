@@ -15,10 +15,10 @@ const Footer = () => {
 
   return (
     <footer className="relative bg-dark-950 border-t border-white/[0.05] overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/25 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-500/25 to-transparent" />
       <div
         className="orb absolute left-1/2 -translate-x-1/2 bottom-0 w-[600px] h-[200px] pointer-events-none"
-        style={{ background: "radial-gradient(ellipse, rgba(241,196,15,0.05) 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(ellipse, rgba(6,182,212,0.05) 0%, transparent 70%)" }}
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-5 sm:px-8">
@@ -42,7 +42,7 @@ const Footer = () => {
 
           <motion.button
             onClick={() => scrollToSection("rsvp")}
-            className="inline-flex items-center gap-2 px-8 py-3.5 border border-gold-500/30 text-gold-400 text-sm font-semibold tracking-widest uppercase rounded-xl hover:border-gold-500/60 hover:bg-gold-500/5 transition-all duration-200"
+            className="inline-flex items-center gap-2 px-8 py-3.5 border border-primary-500/30 text-primary-400 text-sm font-semibold tracking-widest uppercase rounded-xl hover:border-primary-500/60 hover:bg-primary-500/5 transition-all duration-200"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
           >
@@ -57,7 +57,7 @@ const Footer = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <div className="flex items-center gap-2 text-gold-500/60">
+          <div className="flex items-center gap-2 text-primary-500/60">
             <StarIcon className="w-3 h-3" />
             <span className="text-[10px] font-semibold tracking-[0.22em] uppercase">
               Statisense · {year}
@@ -70,7 +70,7 @@ const Footer = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-xs text-gray-600 hover:text-gold-400 transition-colors duration-200 tracking-wider"
+                className="text-xs text-gray-600 hover:text-primary-400 transition-colors duration-200 tracking-wider"
               >
                 {link.label}
               </a>

@@ -8,7 +8,7 @@ const FAQSection = () => {
 
   return (
     <section className="relative py-28 px-5 bg-dark-800 overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/15 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-500/15 to-transparent" />
 
       <div className="relative z-10 max-w-2xl mx-auto">
         <motion.div
@@ -32,7 +32,7 @@ const FAQSection = () => {
                 key={i}
                 className={`rounded-2xl border transition-colors duration-300 overflow-hidden ${
                   isOpen
-                    ? "border-gold-500/25 bg-dark-700/50"
+                    ? "border-primary-500/25 bg-dark-700/50"
                     : "border-white/[0.06] bg-dark-700/20 hover:border-white/10"
                 }`}
                 initial={{ opacity: 0, y: 20 }}
@@ -54,7 +54,7 @@ const FAQSection = () => {
                   <div
                     className={`flex-shrink-0 w-7 h-7 rounded-full border flex items-center justify-center transition-all duration-300 ${
                       isOpen
-                        ? "border-gold-400 bg-gold-500/10 text-gold-400 rotate-0"
+                        ? "border-primary-400 bg-primary-500/10 text-primary-400 rotate-0"
                         : "border-gray-700 text-gray-500 group-hover:border-gray-500"
                     }`}
                   >
@@ -77,7 +77,7 @@ const FAQSection = () => {
                       className="overflow-hidden"
                     >
                       <div className="px-7 pb-7">
-                        <div className="h-px bg-gradient-to-r from-gold-500/20 to-transparent mb-5" />
+                        <div className="h-px bg-gradient-to-r from-primary-500/20 to-transparent mb-5" />
                         <p className="text-gray-200 leading-relaxed text-sm">
                           {faq.answer}
                         </p>

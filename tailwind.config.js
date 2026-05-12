@@ -7,26 +7,42 @@ export default {
   theme: {
     extend: {
       colors: {
-        gold: {
-          300: '#FDEAA0',
-          400: '#F4D03F',
-          500: '#F1C40F',
-          600: '#D4AC0D',
-          700: '#B8960A',
-          800: '#8B6F08',
+        primary: {
+          300: '#38BDF8',
+          400: '#0EA5E9',
+          500: '#0284C7',
+          600: '#0369A1',
+          700: '#0F4C75',
+          800: '#1E3A8A',
+        },
+        blue: {
+          300: '#93C5FD',
+          400: '#60A5FA',
+          500: '#3B82F6',
+          600: '#2563EB',
+          700: '#1D4ED8',
+          800: '#1E40AF',
+        },
+        cyan: {
+          300: '#67E8F9',
+          400: '#22D3EE',
+          500: '#06B6D4',
+          600: '#0891B2',
+          700: '#0E7490',
+          800: '#155E75',
         },
         dark: {
-          950: '#070708',
-          900: '#0A0A0B',
-          800: '#111113',
-          700: '#1C1C1F',
-          600: '#2A2A2E',
-          500: '#3A3A3F',
+          950: '#020617',
+          900: '#0F172A',
+          800: '#1E293B',
+          700: '#334155',
+          600: '#475569',
+          500: '#64748B',
         }
       },
       fontFamily: {
-        'serif': ['Playfair Display', 'Georgia', 'serif'],
         'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'display': ['Inter', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.8s ease-in-out',
@@ -53,7 +69,8 @@ export default {
         },
       },
       backgroundImage: {
-        'gold-shimmer': 'linear-gradient(90deg, #F1C40F 0%, #FDEAA0 40%, #F1C40F 80%)',
+        'primary-gradient': 'linear-gradient(135deg, #22D3EE 0%, #3B82F6 50%, #1D4ED8 100%)',
+        'primary-shimmer': 'linear-gradient(90deg, #22D3EE 0%, #3B82F6 40%, #1D4ED8 80%)',
       },
     },
   },

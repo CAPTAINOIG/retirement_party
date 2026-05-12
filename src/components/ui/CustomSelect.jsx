@@ -63,11 +63,11 @@ const CustomSelect = ({
           className={`
             w-full px-4 py-3 bg-dark-700 border rounded-lg 
             transition-colors duration-200 text-left
-            focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent
+            focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent
             flex items-center justify-between
             ${error 
               ? 'border-red-500 focus:ring-red-400' 
-              : 'border-gray-600 focus:border-gold-400'
+              : 'border-gray-600 focus:border-cyan-400'
             }
             ${className}
           `}
@@ -76,7 +76,7 @@ const CustomSelect = ({
             {selectedOption ? selectedOption.label : placeholder}
           </span>
           <ChevronDownIcon 
-            className={`w-5 h-5 text-gold-400 transition-transform duration-200 ${
+            className={`w-5 h-5 text-cyan-400 transition-transform duration-200 ${
               isOpen ? 'rotate-180' : ''
             }`}
           />
@@ -90,10 +90,10 @@ const CustomSelect = ({
                 type="button"
                 onClick={() => handleSelect(option)}
                 className={`
-                  w-full px-4 py-3 text-left hover:bg-gold-400 hover:text-dark-900 
+                  w-full px-4 py-3 text-left hover:bg-cyan-400 hover:text-white 
                   transition-colors duration-150 first:rounded-t-lg last:rounded-b-lg
                   ${selectedOption?.value === option.value 
-                    ? 'bg-gold-400 text-dark-900' 
+                    ? 'bg-cyan-400 text-white' 
                     : 'text-white'
                   }
                 `}

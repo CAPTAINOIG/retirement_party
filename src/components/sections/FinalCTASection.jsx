@@ -8,21 +8,21 @@ const FinalCTASection = () => {
     <section className="relative py-32 px-5 bg-dark-950 overflow-hidden">
       <div
         className="orb orb-pulse absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] pointer-events-none"
-        style={{ background: "radial-gradient(circle, rgba(241,196,15,0.08) 0%, transparent 65%)" }}
+        style={{ background: "radial-gradient(circle, rgba(6,182,212,0.08) 0%, transparent 65%)" }}
       />
       <div
         className="absolute inset-0 opacity-[0.018] pointer-events-none"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(241,196,15,1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(241,196,15,1) 1px, transparent 1px)
+            linear-gradient(rgba(6,182,212,1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(6,182,212,1) 1px, transparent 1px)
           `,
           backgroundSize: "70px 70px",
         }}
       />
 
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/20 to-transparent" />
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/20 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-500/20 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-500/20 to-transparent" />
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         <motion.div
@@ -45,8 +45,8 @@ const FinalCTASection = () => {
 
           <motion.button
             onClick={scrollToRSVP}
-            className="inline-flex items-center gap-3 px-12 py-5 bg-gold-500 text-dark-950 font-bold text-sm tracking-[0.16em] uppercase rounded-xl hover:bg-gold-400 transition-colors duration-200 shadow-[0_0_48px_rgba(241,196,15,0.3)]"
-            whileHover={{ scale: 1.04, boxShadow: "0 0 64px rgba(241,196,15,0.45)" }}
+            className="inline-flex items-center gap-3 px-12 py-5 bg-primary-500 text-white font-bold text-sm tracking-[0.16em] uppercase rounded-xl hover:bg-primary-400 transition-colors duration-200 shadow-[0_0_48px_rgba(6,182,212,0.3)]"
+            whileHover={{ scale: 1.04, boxShadow: "0 0 64px rgba(6,182,212,0.45)" }}
             whileTap={{ scale: 0.97 }}
           >
             Reserve My Seat
@@ -67,7 +67,7 @@ const FinalCTASection = () => {
             { value: "Free", label: "For Approved Guests" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <p className="font-serif text-3xl font-bold text-gold-400 mb-1">{stat.value}</p>
+              <p className="font-serif text-3xl font-bold text-primary-400 mb-1">{stat.value}</p>
               <p className="text-xs text-gray-600 tracking-widest uppercase">{stat.label}</p>
             </div>
           ))}
