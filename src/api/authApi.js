@@ -8,3 +8,5 @@ export const register = async (userData) => {
   const res = await axiosInstance.post(ENDPOINTS.REGISTER, userData);
   return res.data;
 };
+
+export { ENDPOINTS };
