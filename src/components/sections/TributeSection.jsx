@@ -102,16 +102,17 @@ const TributeSection = () => (
         </div>
       </div>
       <motion.div
-        className="mt-20 text-center max-w-2xl mx-auto"
+        className="mt-20 text-center max-w-4xl mx-auto"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
       >
         <p className="font-bold text-xl sm:text-2xl text-gray-200 leading-relaxed">
-          "On July 10th in Lagos, we are throwing the tools that built the
-          legacy Business Intelligence a proper retirement party. You are
-          invited to the handover."
+          On July 10th in Lagos, we are throwing the tools that built the legacy Business Intelligence a proper retirement party.
+          <br />
+          <br />
+          You are invited to the handover.
         </p>
       </motion.div>
     </div>

@@ -4,6 +4,7 @@ import { StarIcon, CheckCircleIcon } from "@heroicons/react/24/solid";
 import { useForm } from "../../hooks/useForm";
 import { HEAR_ABOUT_OPTIONS } from "../../utils/constants";
 import { register } from "../../api/authApi";
+import dataImage from "../../assets/assets.jpeg";
 
 const FIELDS = [
   {
@@ -96,8 +97,15 @@ const RSVPSection = () => {
       id="rsvp"
       className="relative py-28 px-5 bg-dark-800 overflow-hidden"
     >
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 mix-blend-overlay"
+        style={{ backgroundImage: `url(${dataImage})` }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-dark-900/50 via-dark-800/60 to-dark-900/70" />
+      
       <div
-        className="orb orb-pulse absolute left-1/2 -translate-x-1/2 -top-20 w-[700px] h-[350px] pointer-events-none"
+        className="orb orb-pulse absolute left-1/2 -translate-x-1/2 -top-20 w-[700px] h-[350px] pointer-events-none z-10"
         style={{
           background:
             "radial-gradient(ellipse, rgba(6,182,212,0.07) 0%, transparent 70%)",

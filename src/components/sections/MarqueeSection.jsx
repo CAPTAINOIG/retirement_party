@@ -14,17 +14,22 @@ const Item = ({ before, after }) => (
 );
 
 const MarqueeSection = () => {
-  const items = [...MARQUEE_ITEMS, ...MARQUEE_ITEMS];
+  const items = [...MARQUEE_ITEMS, ...MARQUEE_ITEMS, ...MARQUEE_ITEMS];
 
   return (
     <div className="relative py-7 bg-dark-800 border-y border-primary-500/10 overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-500/30 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-500/30 to-transparent" />
 
-      <div className="marquee-track">
-        <div className="marquee-inner">
+      <div className="marquee-container">
+        <div className="marquee-content">
           {items.map((item, i) => (
-            <Item key={i} {...item} />
+            <Item key={`first-${i}`} {...item} />
+          ))}
+        </div>
+        <div className="marquee-content">
+          {items.map((item, i) => (
+            <Item key={`second-${i}`} {...item} />
           ))}
         </div>
       </div>

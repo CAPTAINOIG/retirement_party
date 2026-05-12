@@ -55,22 +55,6 @@ body {
   border-radius: 2px;
 }
 
-.marquee {
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
-}
-
-.marquee-content {
-  display: inline-block;
-  animation: marquee 60s linear infinite;
-}
-
-@keyframes marquee {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-
 .glass-effect {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
@@ -150,21 +134,22 @@ select option::-moz-selection {
 }
 
 /* Marquee Animation Classes */
-.marquee-track {
+.marquee-container {
   display: flex;
   overflow: hidden;
   white-space: nowrap;
   width: 100%;
 }
 
-.marquee-inner {
+.marquee-content {
   display: flex;
-  animation: marquee-scroll 60s linear infinite;
+  animation: marquee-scroll 30s linear infinite;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 @keyframes marquee-scroll {
-  0% { transform: translateX(100%); }
+  0% { transform: translateX(0); }
   100% { transform: translateX(-100%); }
 }
 

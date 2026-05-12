@@ -61,15 +61,18 @@ const Navigation = () => {
             </div>
 
             <div className="flex items-center gap-3">
-              <motion.button
-                onClick={() => scrollToSection("rsvp")}
-                className="bg-white hidden sm:flex items-center gap-2 px-5 py-2.5 text-[0.75rem] font-bold tracking-[0.1em] text-black rounded-full hover:bg-cyan-400 transition-colors duration-200 focus:outline-none"
+              <motion.a
+                href="https://tix.africa/discover/retirepawabi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white flex items-center gap-2 px-4 py-2.5 text-[0.75rem] font-bold tracking-[0.1em] text-black rounded-full hover:bg-cyan-400 transition-colors duration-200 focus:outline-none sm:px-5"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
-                Get Ticket
+                <span className="hidden xs:inline">Get Ticket</span>
+                <span className="lg:block sm:hiddem">Get Ticket</span>
                 <span className="opacity-70">→</span>
-              </motion.button>
+              </motion.a>
 
               <button
                 className="md:hidden text-gray-300 hover:text-cyan-400 transition-colors focus:outline-none"
@@ -124,9 +127,20 @@ const Navigation = () => {
                   {item.label}
                 </motion.button>
               ))}
+              <motion.a
+                href="https://tix.africa/discover/retirepawabi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 px-8 py-3 bg-white text-black font-bold rounded-lg text-sm tracking-wider uppercase hover:bg-cyan-400 transition-colors text-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.25 }}
+              >
+                Get Ticket →
+              </motion.a>
               <motion.button
                 onClick={() => scrollToSection("rsvp")}
-                className="mt-4 px-8 py-3 bg-blue-500 text-white font-bold rounded-lg text-sm tracking-wider uppercase hover:bg-cyan-400 transition-colors"
+                className="mt-2 px-8 py-3 bg-blue-500 text-white font-bold rounded-lg text-sm tracking-wider uppercase hover:bg-cyan-400 transition-colors"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}

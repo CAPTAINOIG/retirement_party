@@ -3,7 +3,6 @@ import {
   HeroSection,
   MarqueeSection,
   TributeSection,
-  PunchlineSection,
   GuestListSection,
   RSVPSection,
   FinalCTASection,
@@ -18,7 +17,7 @@ function App() {
       <HeroSection />
       <MarqueeSection />
       <TributeSection />
-      <PunchlineSection />
+      {/* <PunchlineSection /> */}
       <GuestListSection />
       <RSVPSection />
       <FinalCTASection />
