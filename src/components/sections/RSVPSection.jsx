@@ -6,11 +6,38 @@ import { HEAR_ABOUT_OPTIONS } from "../../utils/constants";
 import { register } from "../../api/authApi";
 
 const FIELDS = [
-  { name: "firstName", label: "First Name", type: "text", placeholder: "John", half: true },
-  { name: "lastName",  label: "Last Name",  type: "text", placeholder: "Doe", half: true },
-  { name: "email",     label: "Work Email", type: "email", placeholder: "doe@company.com" },
-  { name: "company",   label: "Company",    type: "text", placeholder: "Statisense" },
-  { name: "title",     label: "Title / Role", type: "text", placeholder: "Head of Data" },
+  {
+    name: "firstName",
+    label: "First Name",
+    type: "text",
+    placeholder: "John",
+    half: true,
+  },
+  {
+    name: "lastName",
+    label: "Last Name",
+    type: "text",
+    placeholder: "Doe",
+    half: true,
+  },
+  {
+    name: "email",
+    label: "Work Email",
+    type: "email",
+    placeholder: "doe@company.com",
+  },
+  {
+    name: "company",
+    label: "Company",
+    type: "text",
+    placeholder: "Statisense",
+  },
+  {
+    name: "title",
+    label: "Title / Role",
+    type: "text",
+    placeholder: "Head of Data",
+  },
 ];
 
 const RSVPSection = () => {
@@ -18,19 +45,24 @@ const RSVPSection = () => {
   const [errorMessage, setErrorMessage] = useState("");
 
   const initialFormData = {
-    firstName: "", lastName: "", email: "",
-    company: "", title: "", hearAbout: "",
+    firstName: "",
+    lastName: "",
+    email: "",
+    company: "",
+    title: "",
+    hearAbout: "",
   };
 
   const validationRules = {
     firstName: { required: true },
-    lastName:  { required: true },
-    email:     { required: true, email: true },
-    company:   { required: true },
-    title:     { required: true },
+    lastName: { required: true },
+    email: { required: true, email: true },
+    company: { required: true },
+    title: { required: true },
   };
 
-  const { formData, errors, isSubmitting, handleChange, handleSubmit } = useForm(initialFormData);
+  const { formData, errors, isSubmitting, handleChange, handleSubmit } =
+    useForm(initialFormData);
 
   const onSubmit = async (data) => {
     try {
@@ -38,10 +70,14 @@ const RSVPSection = () => {
       const res = await register(data);
       setSubmitted(true);
     } catch (error) {
-      if (error.code === 'ECONNABORTED') {
-        setErrorMessage("Request timed out. The server might be slow. Please try again.");
+      if (error.code === "ECONNABORTED") {
+        setErrorMessage(
+          "Request timed out. The server might be slow. Please try again.",
+        );
       } else if (error.response?.status === 409) {
-        setErrorMessage("This email is already registered. Please use a different email address.");
+        setErrorMessage(
+          "This email is already registered. Please use a different email address.",
+        );
       } else if (error.response?.status === 400) {
         setErrorMessage("Please fill in all required fields correctly.");
       } else {
@@ -56,10 +92,16 @@ const RSVPSection = () => {
   };
 
   return (
-    <section id="rsvp" className="relative py-28 px-5 bg-dark-800 overflow-hidden">
+    <section
+      id="rsvp"
+      className="relative py-28 px-5 bg-dark-800 overflow-hidden"
+    >
       <div
         className="orb orb-pulse absolute left-1/2 -translate-x-1/2 -top-20 w-[700px] h-[350px] pointer-events-none"
-        style={{ background: "radial-gradient(ellipse, rgba(6,182,212,0.07) 0%, transparent 70%)" }}
+        style={{
+          background:
+            "radial-gradient(ellipse, rgba(6,182,212,0.07) 0%, transparent 70%)",
+        }}
       />
 
       <div className="relative z-10 max-w-xl mx-auto">
@@ -77,7 +119,7 @@ const RSVPSection = () => {
             </span>
             <StarIcon className="w-3 h-3 text-primary-500" />
           </div>
-          <h2 className="text-4xl md:text-5xl text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl md:text-[3.5rem] text-white leading-tight mb-6">
             Reserve your seat.
           </h2>
           <p className="text-gray-200 text-base leading-relaxed max-w-sm mx-auto">
@@ -110,15 +152,21 @@ const RSVPSection = () => {
                     className="flex justify-center mb-6"
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
-                    transition={{ type: "spring", stiffness: 260, damping: 18, delay: 0.1 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 260,
+                      damping: 18,
+                      delay: 0.1,
+                    }}
                   >
                     <CheckCircleIcon className="w-16 h-16 text-primary-400" />
                   </motion.div>
-                  <h3 className="font-sans text-3xl text-white mb-3">
+                  <h3 className="text-3xl text-white mb-3">
                     Your seat is reserved.
                   </h3>
                   <p className="text-gray-200 text-base leading-relaxed max-w-xs mx-auto mb-6">
-                    We'll review your RSVP and confirm within 48 hours. Watch your inbox.
+                    We'll review your RSVP and confirm within 48 hours. Watch
+                    your inbox.
                   </p>
                   <p className="text-xs tracking-widest uppercase text-primary-600">
                     The Retirement Party · Lagos · 10 July 2026
@@ -142,7 +190,7 @@ const RSVPSection = () => {
                       {errorMessage}
                     </motion.div>
                   )}
-                  
+
                   <div className="grid sm:grid-cols-2 gap-5">
                     {FIELDS.slice(0, 2).map((f) => (
                       <FieldInput
@@ -175,7 +223,9 @@ const RSVPSection = () => {
                       onChange={handleChange}
                       className="field-input"
                     >
-                      <option value="" disabled>Select an option…</option>
+                      <option value="" disabled>
+                        Select an option…
+                      </option>
                       {HEAR_ABOUT_OPTIONS.map((o) => (
                         <option key={o.value} value={o.value}>
                           {o.label}

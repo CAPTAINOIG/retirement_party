@@ -33,7 +33,7 @@ const FinalCTASection = () => {
         >
           <span className="eyebrow mb-8 block text-center">10 July 2026 · Lagos Island</span>
 
-          <h2 className="font-sans text-4xl sm:text-5xl md:text-[3.5rem] text-white leading-tight mb-6">
+          <h2 className=" text-4xl sm:text-5xl md:text-[3.5rem] text-white leading-tight mb-6">
             The next era of Data Intelligence{" "}
             <span className="italic text-gray-200 font-light">begins in Lagos.</span>
           </h2>
@@ -67,7 +67,7 @@ const FinalCTASection = () => {
             { value: "Free", label: "For Approved Guests" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <p className="font-sans text-3xl font-bold text-gray-200 mb-1">{stat.value}</p>
+              <p className="text-3xl font-bold text-gray-200 mb-1">{stat.value}</p>
               <p className="text-xs text-gray-200 tracking-widest uppercase">{stat.label}</p>
             </div>
           ))}

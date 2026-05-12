@@ -33,7 +33,7 @@ const Footer = () => {
             <span className="eyebrow">Statisense · Lagos · 10 July 2026</span>
           </div>
 
-          <h2 className="font-sans text-3xl sm:text-4xl text-white mb-3 leading-tight">
+          <h2 className="text-4xl sm:text-5xl md:text-[3.5rem] text-white leading-tight mb-6">
             The Immortal AI Retirement Party.
           </h2>
           <p className="text-gray-200 text-base mb-10 max-w-lg mx-auto">

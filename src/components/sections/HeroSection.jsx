@@ -64,7 +64,7 @@ const HeroSection = () => {
         </motion.div>
 
         <motion.h1
-          className="font-sans mb-10 leading-[1.1] tracking-tight"
+          className="mb-10 leading-[1.1] tracking-tight"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}

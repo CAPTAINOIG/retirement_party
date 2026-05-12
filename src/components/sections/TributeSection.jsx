@@ -25,7 +25,7 @@ const TributeSection = () => (
         <div className="flex justify-center mb-5">
           <span className="eyebrow">A Tribute</span>
         </div>
-        <h2 className="font-sans text-4xl sm:text-5xl md:text-[3.2rem] text-white mb-6 leading-tight font-semibold">
+        <h2 className="font- text-4xl sm:text-5xl md:text-[3.2rem] text-white mb-6 leading-tight font-semibold">
           A decade of service.{" "}
           <span className="italic text-gray-400 font-normal">
             One night of thanks.
