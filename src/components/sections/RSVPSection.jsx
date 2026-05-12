@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { StarIcon, CheckCircleIcon } from "@heroicons/react/24/solid";
 import { useForm } from "../../hooks/useForm";
 import { HEAR_ABOUT_OPTIONS } from "../../utils/constants";
-import { register } from "../../api/Authapi";
+import { register } from "../../api/authApi";
 
 const FIELDS = [
   { name: "firstName", label: "First Name", type: "text", placeholder: "John", half: true },
