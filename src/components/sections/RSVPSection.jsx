@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { StarIcon, CheckCircleIcon } from "@heroicons/react/24/solid";
 import { useForm } from "../../hooks/useForm";
 import { HEAR_ABOUT_OPTIONS } from "../../utils/constants";
+import { register } from "../../api/Authapi";
 
 const FIELDS = [
   { name: "firstName", label: "First Name", type: "text", placeholder: "John", half: true },
@@ -14,6 +15,7 @@ const FIELDS = [
 
 const RSVPSection = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const initialFormData = {
     firstName: "", lastName: "", email: "",
@@ -32,12 +34,19 @@ const RSVPSection = () => {
 
   const onSubmit = async (data) => {
     try {
-     const res = await new Promise((r) => setTimeout(r, 1200));
-      console.log("RSVP submitted:", data);
+      setErrorMessage("");
+      const res = await register(data);
       setSubmitted(true);
-      
     } catch (error) {
-      console.log(error)
+      if (error.code === 'ECONNABORTED') {
+        setErrorMessage("Request timed out. The server might be slow. Please try again.");
+      } else if (error.response?.status === 409) {
+        setErrorMessage("This email is already registered. Please use a different email address.");
+      } else if (error.response?.status === 400) {
+        setErrorMessage("Please fill in all required fields correctly.");
+      } else {
+        setErrorMessage("Something went wrong. Please try again later.");
+      }
     }
   };
 
@@ -68,7 +77,7 @@ const RSVPSection = () => {
             </span>
             <StarIcon className="w-3 h-3 text-primary-500" />
           </div>
-          <h2 className="font-sans text-4xl md:text-5xl text-white mb-4">
+          <h2 className="text-4xl md:text-5xl text-white mb-4">
             Reserve your seat.
           </h2>
           <p className="text-gray-200 text-base leading-relaxed max-w-sm mx-auto">
@@ -123,6 +132,17 @@ const RSVPSection = () => {
                   initial={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                 >
+                  {errorMessage && (
+                    <motion.div
+                      className="p-4 rounded-lg bg-red-500/10 border border-red-500/20 text-red-400 text-sm"
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      {errorMessage}
+                    </motion.div>
+                  )}
+                  
                   <div className="grid sm:grid-cols-2 gap-5">
                     {FIELDS.slice(0, 2).map((f) => (
                       <FieldInput
