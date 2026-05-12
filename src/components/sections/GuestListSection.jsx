@@ -32,7 +32,7 @@ const GuestListSection = () => (
         viewport={{ once: true }}
       >
         <span className="eyebrow mb-5 block text-center">The Guest List</span>
-        <h2 className="font-serif text-4xl md:text-5xl text-white max-w-2xl mx-auto leading-tight">
+        <h2 className="font-sans text-4xl md:text-5xl text-white max-w-2xl mx-auto leading-tight">
           If your title is on this list,{" "}
           <span className="text-white font-light">this Event is for you.</span>
         </h2>
@@ -52,7 +52,7 @@ const GuestListSection = () => (
             <div className="icon-ring text-primary-400">
               {ICONS[i]}
             </div>
-            <h3 className="font-serif text-lg font-semibold text-white leading-snug">
+            <h3 className="font-sans text-lg font-semibold text-white leading-snug">
               {guest.title}
             </h3>
             <p className="text-sm text-white leading-relaxed flex-1">

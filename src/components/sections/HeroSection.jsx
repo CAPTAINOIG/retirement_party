@@ -69,17 +69,17 @@ const HeroSection = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <span className="block text-4xl sm:text-5xl lg:text-[3.8rem] font-bold text-gray-300 mb-3">
+          <span className="block text-4xl sm:text-5xl lg:text-[3.8rem] font-semibold text-gray-300 mb-3">
             Pawa BI gave us a decade of dashboards.
           </span>
-          <span className="block text-4xl sm:text-5xl lg:text-[3.8rem] font-extrabold text-white">
+          <span className="block text-4xl sm:text-5xl lg:text-[3.8rem] font-semibold text-white">
             Immortal AI gives us{" "}
             <span className="primary-underline text-cyan-400">decisions</span>.
           </span>
         </motion.h1>
 
         <motion.p
-          className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto mb-12 leading-relaxed"
+          className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto mb-12 leading-relaxed font-normal"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.65 }}
@@ -100,7 +100,7 @@ const HeroSection = () => {
         >
           <motion.button
             onClick={scrollToRSVP}
-            className="px-9 py-4 text-sm font-bold tracking-widest uppercase bg-blue-500 text-white rounded-xl hover:bg-cyan-400 transition-colors duration-200 shadow-[0_0_32px_rgba(34,211,238,0.28)]"
+            className="px-9 py-4 text-sm font-semibold tracking-widest uppercase bg-blue-500 text-white rounded-xl hover:bg-cyan-400 transition-colors duration-200 shadow-[0_0_32px_rgba(34,211,238,0.28)]"
             whileHover={{ scale: 1.03, boxShadow: "0 0 48px rgba(34,211,238,0.45)" }}
             whileTap={{ scale: 0.97 }}
           >
@@ -109,7 +109,7 @@ const HeroSection = () => {
 
           <motion.button
             onClick={scrollToAbout}
-            className="px-9 py-4 text-sm font-bold tracking-widest uppercase border border-cyan-400/30 text-cyan-400 rounded-xl hover:border-cyan-400/60 hover:bg-cyan-400/5 transition-all duration-200"
+            className="px-9 py-4 text-sm font-semibold tracking-widest uppercase border border-cyan-400/30 text-cyan-400 rounded-xl hover:border-cyan-400/60 hover:bg-cyan-400/5 transition-all duration-200"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
           >

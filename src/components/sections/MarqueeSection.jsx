@@ -6,9 +6,9 @@ const Separator = () => (
 
 const Item = ({ before, after }) => (
   <span className="inline-flex items-baseline gap-3 whitespace-nowrap">
-    <span className="text-gray-500 font-serif italic text-lg">{before}</span>
+    <span className="text-gray-500 font-sans italic text-lg">{before}</span>
     <span className="text-primary-500 opacity-40 text-sm">→</span>
-    <span className="text-gray-300 font-serif text-lg">{after}</span>
+    <span className="text-gray-300 font-sans text-lg">{after}</span>
     <Separator />
   </span>
 );

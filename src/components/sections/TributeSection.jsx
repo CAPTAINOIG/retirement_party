@@ -25,13 +25,13 @@ const TributeSection = () => (
         <div className="flex justify-center mb-5">
           <span className="eyebrow">A Tribute</span>
         </div>
-        <h2 className="font-sans text-4xl sm:text-5xl md:text-[3.2rem] text-white mb-6 leading-tight">
+        <h2 className="font-sans text-4xl sm:text-5xl md:text-[3.2rem] text-white mb-6 leading-tight font-semibold">
           A decade of service.{" "}
-          <span className="italic text-white font-light">
+          <span className="italic text-gray-400 font-normal">
             One night of thanks.
           </span>
         </h2>
-        <p className="text-gray-200 text-lg max-w-2xl mx-auto leading-relaxed">
+        <p className="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed font-normal">
           For twenty years, the dashboard was the destination. Three tools
           shaped how Africa measured its business. On July 10th, we give them
           the send-off they deserve.
@@ -74,7 +74,7 @@ const TributeSection = () => (
                   >
                     <div className="flex items-center gap-3 mb-3">
                       <span
-                        className={`text-2xl font-serif font-bold ${
+                        className={`text-2xl font-bold ${
                           item.isNew ? "text-cyan-400" : "text-white"
                         }`}
                       >

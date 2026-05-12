@@ -17,11 +17,12 @@ body {
   font-family: 'Inter', system-ui, sans-serif;
   background-color: #0F172A;
   color: white;
+  font-weight: 400;
 }
 
 .font-display {
   font-family: 'Inter', system-ui, sans-serif;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .eyebrow {
