@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
+const baseURL = import.meta.env.VITE_API_BASE_URL || "https://retirement-party-backend.onrender.com";
 
 const axiosInstance = axios.create({
   baseURL,
@@ -8,6 +8,7 @@ const axiosInstance = axios.create({
     "Content-Type": "application/json",
     Accept: "application/json",
   },
+  timeout: 60000,
 });
 
 export default axiosInstance;
