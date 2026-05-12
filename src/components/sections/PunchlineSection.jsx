@@ -17,7 +17,7 @@ const PunchlineSection = () => (
         viewport={{ once: true }}
       >
         <span className="eyebrow mb-5 block text-center">A Clean Shift</span>
-        <h2 className="font-serif text-4xl md:text-5xl text-white">
+        <h2 className="font-sans text-4xl md:text-5xl text-white">
           Plainly stated.
         </h2>
       </motion.div>
@@ -36,7 +36,7 @@ const PunchlineSection = () => (
             <div className="num-badge mb-6 select-none">
               {item.number}
             </div>
-            <p className="text-gray-500 text-base leading-relaxed mb-3 line-through decoration-gray-700">
+            <p className="text-white text-base leading-relaxed mb-3">
               {item.old}
             </p>
             <div className="flex items-center gap-2 mb-3">

@@ -35,7 +35,7 @@ const FinalCTASection = () => {
 
           <h2 className="font-serif text-4xl sm:text-5xl md:text-[3.5rem] text-white leading-tight mb-6">
             The next era of Data Intelligence{" "}
-            <span className="italic text-gray-400 font-light">begins in Lagos.</span>
+            <span className="italic text-gray-200 font-light">begins in Lagos.</span>
           </h2>
 
           <p className="text-gray-200 text-xl mb-12 leading-relaxed">
@@ -67,8 +67,8 @@ const FinalCTASection = () => {
             { value: "Free", label: "For Approved Guests" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <p className="font-serif text-3xl font-bold text-primary-400 mb-1">{stat.value}</p>
-              <p className="text-xs text-gray-600 tracking-widest uppercase">{stat.label}</p>
+              <p className="font-serif text-3xl font-bold text-gray-200 mb-1">{stat.value}</p>
+              <p className="text-xs text-gray-200 tracking-widest uppercase">{stat.label}</p>
             </div>
           ))}
         </motion.div>

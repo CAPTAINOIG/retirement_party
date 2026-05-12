@@ -36,7 +36,7 @@ const Footer = () => {
           <h2 className="font-serif text-3xl sm:text-4xl text-white mb-3 leading-tight">
             The Immortal AI Retirement Party.
           </h2>
-          <p className="text-gray-500 text-base mb-10 max-w-lg mx-auto">
+          <p className="text-gray-200 text-base mb-10 max-w-lg mx-auto">
             Hosted by Statisense. One thousand leaders. One night. One handover.
           </p>
 
@@ -70,14 +70,14 @@ const Footer = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-xs text-gray-600 hover:text-primary-400 transition-colors duration-200 tracking-wider"
+                className="text-xs text-gray-200 hover:text-primary-400 transition-colors duration-200 tracking-wider"
               >
                 {link.label}
               </a>
             ))}
           </div>
 
-          <p className="text-xs text-gray-700 tracking-wider">
+          <p className="text-xs text-gray-200 tracking-wider">
             © {year} Statisense. All rights reserved.
           </p>
         </motion.div>

@@ -25,9 +25,9 @@ const TributeSection = () => (
         <div className="flex justify-center mb-5">
           <span className="eyebrow">A Tribute</span>
         </div>
-        <h2 className="font-serif text-4xl sm:text-5xl md:text-[3.2rem] text-white mb-6 leading-tight">
+        <h2 className="font-sans text-4xl sm:text-5xl md:text-[3.2rem] text-white mb-6 leading-tight">
           A decade of service.{" "}
-          <span className="italic text-gray-400 font-light">
+          <span className="italic text-white font-light">
             One night of thanks.
           </span>
         </h2>
@@ -75,7 +75,7 @@ const TributeSection = () => (
                     <div className="flex items-center gap-3 mb-3">
                       <span
                         className={`text-2xl font-serif font-bold ${
-                          item.isNew ? "text-cyan-400" : "text-gray-500"
+                          item.isNew ? "text-cyan-400" : "text-white"
                         }`}
                       >
                         {item.tool}
@@ -86,11 +86,11 @@ const TributeSection = () => (
                         </span>
                       )}
                     </div>
-                    <p className="text-xs font-semibold tracking-[0.12em] uppercase text-gray-500 mb-2">
+                    <p className="text-xs font-semibold tracking-[0.12em] uppercase text-white mb-2">
                       {item.era}
                     </p>
                     <p
-                      className={`text-sm leading-relaxed ${item.isNew ? "text-gray-300" : "text-gray-500"}`}
+                      className={`text-sm leading-relaxed ${item.isNew ? "text-gray-300" : "text-white"}`}
                     >
                       {item.desc}
                     </p>

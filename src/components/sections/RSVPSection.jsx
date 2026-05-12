@@ -5,10 +5,10 @@ import { useForm } from "../../hooks/useForm";
 import { HEAR_ABOUT_OPTIONS } from "../../utils/constants";
 
 const FIELDS = [
-  { name: "firstName", label: "First Name", type: "text", placeholder: "Ada", half: true },
-  { name: "lastName",  label: "Last Name",  type: "text", placeholder: "Okonkwo", half: true },
-  { name: "email",     label: "Work Email", type: "email", placeholder: "ada@company.com" },
-  { name: "company",   label: "Company",    type: "text", placeholder: "Acme Corp" },
+  { name: "firstName", label: "First Name", type: "text", placeholder: "John", half: true },
+  { name: "lastName",  label: "Last Name",  type: "text", placeholder: "Doe", half: true },
+  { name: "email",     label: "Work Email", type: "email", placeholder: "doe@company.com" },
+  { name: "company",   label: "Company",    type: "text", placeholder: "Statisense" },
   { name: "title",     label: "Title / Role", type: "text", placeholder: "Head of Data" },
 ];
 
@@ -68,7 +68,7 @@ const RSVPSection = () => {
             </span>
             <StarIcon className="w-3 h-3 text-primary-500" />
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl text-white mb-4">
+          <h2 className="font-sans text-4xl md:text-5xl text-white mb-4">
             Reserve your seat.
           </h2>
           <p className="text-gray-200 text-base leading-relaxed max-w-sm mx-auto">
@@ -105,7 +105,7 @@ const RSVPSection = () => {
                   >
                     <CheckCircleIcon className="w-16 h-16 text-primary-400" />
                   </motion.div>
-                  <h3 className="font-serif text-3xl text-white mb-3">
+                  <h3 className="font-sans text-3xl text-white mb-3">
                     Your seat is reserved.
                   </h3>
                   <p className="text-gray-200 text-base leading-relaxed max-w-xs mx-auto mb-6">
@@ -185,7 +185,7 @@ const RSVPSection = () => {
                     )}
                   </motion.button>
 
-                  <p className="text-center text-xs text-gray-600 tracking-wider">
+                  <p className="text-center text-xs text-gray-200 tracking-wider">
                     — No payment. No spam. We confirm within 48 hours. —
                   </p>
                 </motion.form>

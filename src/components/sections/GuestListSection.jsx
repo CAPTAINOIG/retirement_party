@@ -16,8 +16,6 @@ const ICONS = [
   </svg>,
 ];
 
-const ROMAN = ["i.", "ii.", "iii.", "iv."];
-
 const GuestListSection = () => (
   <section id="guest-list" className="relative py-28 px-5 bg-dark-950 overflow-hidden">
     <div
@@ -36,7 +34,7 @@ const GuestListSection = () => (
         <span className="eyebrow mb-5 block text-center">The Guest List</span>
         <h2 className="font-serif text-4xl md:text-5xl text-white max-w-2xl mx-auto leading-tight">
           If your title is on this list,{" "}
-          <span className="italic text-gray-400 font-light">this Event is for you.</span>
+          <span className="text-white font-light">this Event is for you.</span>
         </h2>
       </motion.div>
 
@@ -51,16 +49,13 @@ const GuestListSection = () => (
             viewport={{ once: true, margin: "-50px" }}
             whileHover={{ borderColor: "rgba(6,182,212,0.2)" }}
           >
-            <span className="absolute top-5 right-6 font-serif text-3xl text-primary-500/10 font-bold select-none">
-              {ROMAN[i]}
-            </span>
             <div className="icon-ring text-primary-400">
               {ICONS[i]}
             </div>
             <h3 className="font-serif text-lg font-semibold text-white leading-snug">
               {guest.title}
             </h3>
-            <p className="text-sm text-gray-300 leading-relaxed flex-1">
+            <p className="text-sm text-white leading-relaxed flex-1">
               {guest.description}
             </p>
             <div className="h-px bg-gradient-to-r from-primary-500/0 via-primary-500/20 to-primary-500/0 mt-2 group-hover:via-primary-500/40 transition-all duration-500" />
