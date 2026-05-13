@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { StarIcon } from "@heroicons/react/24/solid";
 import { PARTICLES } from "../../utils/constants";
+import dataImage from "../../assets/location.jpeg";
 
 const HeroSection = () => {
   const scrollToRSVP = () =>
@@ -14,6 +15,10 @@ const HeroSection = () => {
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-dark-950 pt-[68px]"
     >
+       <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity- mix-blend-overlay"
+        style={{ backgroundImage: `url(${dataImage})` }}
+      />
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="orb orb-pulse"

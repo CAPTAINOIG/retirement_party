@@ -28,6 +28,12 @@ const FIELDS = [
     placeholder: "doe@company.com",
   },
   {
+    name: "phone",
+    label: "Phone Number",
+    type: "text",
+    placeholder: "08035678900",
+  },
+  {
     name: "company",
     label: "Company",
     type: "text",
@@ -49,6 +55,7 @@ const RSVPSection = () => {
     firstName: "",
     lastName: "",
     email: "",
+    phone: "",
     company: "",
     title: "",
     hearAbout: "",
@@ -58,6 +65,7 @@ const RSVPSection = () => {
     firstName: { required: true },
     lastName: { required: true },
     email: { required: true, email: true },
+    phone: {required: true},
     company: { required: true },
     title: { required: true },
   };
@@ -97,7 +105,6 @@ const RSVPSection = () => {
       id="rsvp"
       className="relative py-28 px-5 bg-dark-800 overflow-hidden"
     >
-      {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 mix-blend-overlay"
         style={{ backgroundImage: `url(${dataImage})` }}

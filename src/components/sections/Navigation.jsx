@@ -70,7 +70,7 @@ const Navigation = () => {
                 whileTap={{ scale: 0.97 }}
               >
                 <span className="hidden xs:inline">Get Ticket</span>
-                <span className="lg:block sm:hiddem">Get Ticket</span>
+                <span className="lg:hidden sm:block">Get Ticket</span>
                 <span className="opacity-70">→</span>
               </motion.a>
 
