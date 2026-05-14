@@ -30,7 +30,7 @@ const Footer = () => {
           viewport={{ once: true }}
         >
           <div className="flex justify-center mb-6">
-            <span className="eyebrow">Statisense · Lagos · 10 July 2026</span>
+            <span className="eyebrow">Statisense · Lagos · 17 July 2026</span>
           </div>
 
           <h2 className="text-4xl sm:text-5xl md:text-[3.5rem] text-white leading-tight mb-6">
@@ -42,7 +42,7 @@ const Footer = () => {
 
           <motion.button
             onClick={() => scrollToSection("rsvp")}
-            className="inline-flex items-center gap-2 px-8 py-3.5 border border-primary-500/30 text-primary-400 text-sm font-semibold tracking-widest uppercase rounded-xl hover:border-primary-500/60 hover:bg-primary-500/5 transition-all duration-200"
+            className="inline-flex items-center gap-2 px-8 py-3.5 border border-white text-white text-sm font-semibold tracking-widest uppercase rounded-xl transition-all duration-200"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
           >
@@ -57,7 +57,7 @@ const Footer = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <div className="flex items-center gap-2 text-primary-500/60">
+          <div className="flex items-center gap-2 text-white">
             <StarIcon className="w-3 h-3" />
             <span className="text-[10px] font-semibold tracking-[0.22em] uppercase">
               Statisense · {year}
@@ -70,7 +70,7 @@ const Footer = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-xs text-gray-200 hover:text-primary-400 transition-colors duration-200 tracking-wider"
+                className="text-xs text-gray-200 transition-colors duration-200 tracking-wider"
               >
                 {link.label}
               </a>

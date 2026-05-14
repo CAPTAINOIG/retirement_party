@@ -33,7 +33,7 @@ const TributeSection = () => (
         </h2>
         <p className="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed font-normal">
           For twenty years, the dashboard was the destination. Three tools
-          shaped how Africa measured its business. On July 10th, we give them
+          shaped how Africa measured its business. On July 17th, we give them
           the send-off they deserve.
         </p>
       </motion.div>
@@ -109,7 +109,7 @@ const TributeSection = () => (
         viewport={{ once: true }}
       >
         <p className="font-bold text-xl sm:text-2xl text-gray-200 leading-relaxed">
-          On July 10th in Lagos, we are throwing the tools that built the legacy Business Intelligence a proper retirement party.
+          On July 17th in Lagos, we are throwing the tools that built the legacy Business Intelligence a proper retirement party.
           <br />
           <br />
           You are invited to the handover.

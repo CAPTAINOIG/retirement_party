@@ -54,8 +54,8 @@ const FAQSection = () => {
                   <div
                     className={`flex-shrink-0 w-7 h-7 rounded-full border flex items-center justify-center transition-all duration-300 ${
                       isOpen
-                        ? "border-primary-400 bg-primary-500/10 text-primary-400 rotate-0"
-                        : "border-gray-700 text-gray-500 group-hover:border-gray-500"
+                        ? "border-primary-400 bg-primary-500/10 text-white rotate-0"
+                        : "border-gray-700 text-white group-hover:border-gray-500"
                     }`}
                   >
                     {isOpen ? (

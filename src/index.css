@@ -26,11 +26,11 @@ body {
 }
 
 .eyebrow {
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #22D3EE;
+  color: white;
 }
 
 .text-gradient {
@@ -143,7 +143,7 @@ select option::-moz-selection {
 
 .marquee-content {
   display: flex;
-  animation: marquee-scroll 30s linear infinite;
+  animation: marquee-scroll 60s linear infinite;
   white-space: nowrap;
   flex-shrink: 0;
 }

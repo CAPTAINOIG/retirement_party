@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { StarIcon } from "@heroicons/react/24/solid";
 import { PARTICLES } from "../../utils/constants";
 import dataImage from "../../assets/location.jpeg";
+import { TbChevronRight } from "react-icons/tb";
 
 const HeroSection = () => {
   const scrollToRSVP = () =>
@@ -13,10 +14,10 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-dark-950 pt-[68px]"
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-dark-800 pt-[68px]"
     >
        <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity- mix-blend-overlay"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 mix-blend-overlay"
         style={{ backgroundImage: `url(${dataImage})` }}
       />
       <div className="absolute inset-0 pointer-events-none">
@@ -65,7 +66,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <span className="eyebrow">The Retirement Party · Lagos · 10 July 2026</span>
+          <span className="text-white">The Retirement Party · Lagos · 17 July 2026</span>
         </motion.div>
 
         <motion.h1
@@ -79,7 +80,7 @@ const HeroSection = () => {
           </span>
           <span className="block text-4xl sm:text-5xl lg:text-[3.8rem] font-semibold text-white">
             Immortal AI gives us{" "}
-            <span className="primary-underline text-cyan-400">decisions</span>.
+            <span className="bg-gradient-to-r from-teal-700 to-blue-400 bg-clip-text text-transparent font-sans primary-underline">decisions</span>.
           </span>
         </motion.h1>
 
@@ -90,11 +91,8 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.65 }}
         >
           This July in Lagos, we are honouring the tools that built modern
-          business intelligence — and welcoming the era that replaces them.
+          business intelligence and welcoming the era that replaces them.
           <br className="hidden sm:block" />
-          <span className="text-gray-300 font-medium">
-            {" "}One thousand Data Enthusiasts. One night. The handover begins.
-          </span>
         </motion.p>
 
         <motion.div
@@ -105,8 +103,8 @@ const HeroSection = () => {
         >
           <motion.button
             onClick={scrollToRSVP}
-            className="px-9 py-4 text-sm font-semibold tracking-widest uppercase bg-blue-500 text-white rounded-xl hover:bg-cyan-400 transition-colors duration-200 shadow-[0_0_32px_rgba(34,211,238,0.28)]"
-            whileHover={{ scale: 1.03, boxShadow: "0 0 48px rgba(34,211,238,0.45)" }}
+            className="px-8 py-2 text-lg bg-white rounded-full text-dark-800"
+            whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
           >
             Reserve My Seat →
@@ -114,7 +112,7 @@ const HeroSection = () => {
 
           <motion.button
             onClick={scrollToAbout}
-            className="px-9 py-4 text-sm font-semibold tracking-widest uppercase border border-cyan-400/30 text-cyan-400 rounded-xl hover:border-cyan-400/60 hover:bg-cyan-400/5 transition-all duration-200"
+            className="px-8 py-3 text-lg border bordeer-dark-800 rounded-full"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
           >
@@ -128,11 +126,11 @@ const HeroSection = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 1.05 }}
         >
-          <StarIcon className="w-3 h-3" />
-          <span className="text-xs font-semibold tracking-[0.2em] uppercase text-cyan-500">
+          <StarIcon className="w-3 h-3 text-white" />
+          <span className="text-xs font-semibold tracking-[0.2em] uppercase text-white">
             Curated guest list · 1,000 seats · No walk-ins
           </span>
-          <StarIcon className="w-3 h-3" />
+          <StarIcon className="w-3 h-3 text-white" />
         </motion.div>
       </div>
 

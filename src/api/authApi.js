@@ -1,12 +1,10 @@
-import axiosInstance from "../utils/Axiosinstance";
+import { useMutation } from '@tanstack/react-query';
+import http from '../lib/http';
 
-const ENDPOINTS = {
-  REGISTER: `/api/users/register`, 
+export const useCreateEventAttendee = () => {
+  return useMutation({
+    mutationFn: (body) => {
+      return http.post('/misc/event-attendees', body);
+    },
+  });
 };
-
-export const register = async (userData) => {
-  const res = await axiosInstance.post(ENDPOINTS.REGISTER, userData);
-  return res.data;
-};
-
-export { ENDPOINTS };

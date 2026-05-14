@@ -65,12 +65,12 @@ const Navigation = () => {
                 href="https://tix.africa/discover/retirepawabi"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white flex items-center gap-2 px-4 py-2.5 text-[0.75rem] font-bold tracking-[0.1em] text-black rounded-full hover:bg-cyan-400 transition-colors duration-200 focus:outline-none sm:px-5"
+                className="bg-white flex items-center gap-2 px-4 py-2.5 text-[0.75rem] font-bold tracking-[0.1em] text-black rounded-full hover:bg-gray-200 transition-colors duration-200 focus:outline-none sm:px-5"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
                 <span className="hidden xs:inline">Get Ticket</span>
-                <span className="lg:hidden sm:block">Get Ticket</span>
+                <span className="lg:hidden md:hidden sm:block">Get Ticket</span>
                 <span className="opacity-70">→</span>
               </motion.a>
 

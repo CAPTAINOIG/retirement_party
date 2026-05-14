@@ -31,7 +31,7 @@ const FinalCTASection = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <span className="eyebrow mb-8 block text-center">10 July 2026 · Lagos Island</span>
+          <span className="eyebrow mb-8 block text-center">17 July 2026 · Lagos Island</span>
 
           <h2 className=" text-4xl sm:text-5xl md:text-[3.5rem] text-white leading-tight mb-6">
             The next era of Data Intelligence{" "}
@@ -45,7 +45,7 @@ const FinalCTASection = () => {
 
           <motion.button
             onClick={scrollToRSVP}
-            className="inline-flex items-center gap-3 px-12 py-5 bg-primary-500 text-white font-bold text-sm tracking-[0.16em] uppercase rounded-xl hover:bg-primary-400 transition-colors duration-200 shadow-[0_0_48px_rgba(6,182,212,0.3)]"
+            className="inline-flex items-center gap-3 px-12 py-5 bg-white text-dark-800 font-bold text-sm tracking-[0.16em] uppercase rounded-xl transition-colors duration-200 shadow-[0_0_48px_rgba(6,182,212,0.3)]"
             whileHover={{ scale: 1.04, boxShadow: "0 0 64px rgba(6,182,212,0.45)" }}
             whileTap={{ scale: 0.97 }}
           >
