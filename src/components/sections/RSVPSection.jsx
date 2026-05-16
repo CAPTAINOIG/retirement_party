@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { StarIcon } from "@heroicons/react/24/solid";
 import { useForm } from "react-hook-form";
-import { TbUser, TbMail, TbBuilding, TbBriefcase, TbInfoCircle } from "react-icons/tb";
+import { TbUser, TbMail, TbBuilding, TbBriefcase, TbInfoCircle, TbPhoneCall } from "react-icons/tb";
 import { HEAR_ABOUT_OPTIONS } from "../../utils/constants";
 import { useCreateEventAttendee } from "../../api/authApi";
 import SuccessView from "./SuccessView";
@@ -22,28 +22,33 @@ const RSVPSection = () => {
   const { mutate: createAttendee, isPending } = useCreateEventAttendee();
 
   const onSubmit = (data) => {
-    console.log("Submitting RSVP with data:", data);
     setErrorMessage("");
     createAttendee(
-       {
-        name: data.name,
+      {
+        firstName: data.name,
+        lastName: data.lastName,
         email: data.email,
-        meta: {
-          lastName: data.lastName,
-          company: data.company,
-          title: data.title,
-          hearAbout: data.hearAbout
+        phone: data.phone,
+        company: data.company,
+        title: data.title,
+        hearAbout: data.hearAbout,
+      },
+      {
+        onSuccess: (res) => {
+          console.log("RSVP submitted:", res);
+          setSubmitted(true);
+          reset();
         },
-      onSuccess: (res) => {
-        console.log("RSVP submitted:", res);
-        setSubmitted(true);
-        reset();
-      },
-      onError: (e) => {
-        console.log(e)
-        setErrorMessage(e?.response?.data?.message ?? 'Something went wrong, please try again');
-      },
-    });
+        onError: (e) => {
+          console.log(e);
+          setErrorMessage(
+            e?.response?.data?.message ??
+              e?.message ??
+              'Something went wrong, please try again'
+          );
+        },
+      }
+    );
   };
   const onFormSubmit = handleSubmit(onSubmit);
 
@@ -102,7 +107,7 @@ const RSVPSection = () => {
           <div className="relative bg-dark-700/60 backdrop-blur-xl rounded-2xl p-8 sm:p-10">
             <AnimatePresence mode="wait">
               {submitted ? (
-                <SuccessView 
+                <SuccessView
                   onRegisterAnother={() => setSubmitted(false)}
                 />
               ) : (
@@ -135,11 +140,10 @@ const RSVPSection = () => {
                         <input
                           {...register('name', { required: 'First name is required' })}
                           placeholder="Enter your first name"
-                          className={`w-full pl-12 pr-4 py-4 text-base text-white bg-slate-700/50 border rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 font-sans ${
-                            errors.name 
-                              ? 'border-red-500 focus:border-red-500' 
+                          className={`w-full pl-12 pr-4 py-4 text-base text-white bg-slate-700/50 border rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 font-sans ${errors.name
+                              ? 'border-red-500 focus:border-red-500'
                               : 'border-cyan-400/20 hover:border-cyan-400/40 focus:border-cyan-400'
-                          }`}
+                            }`}
                         />
                         {errors.name && (
                           <p className="mt-1 text-sm text-red-400 font-sans">{errors.name.message}</p>
@@ -156,11 +160,10 @@ const RSVPSection = () => {
                         <input
                           {...register('lastName', { required: 'Last name is required' })}
                           placeholder="Enter your last name"
-                          className={`w-full pl-12 pr-4 py-4 text-base text-white bg-slate-700/50 border rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 font-sans ${
-                            errors.lastName 
-                              ? 'border-red-500 focus:border-red-500' 
+                          className={`w-full pl-12 pr-4 py-4 text-base text-white bg-slate-700/50 border rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 font-sans ${errors.lastName
+                              ? 'border-red-500 focus:border-red-500'
                               : 'border-cyan-400/20 hover:border-cyan-400/40 focus:border-cyan-400'
-                          }`}
+                            }`}
                         />
                         {errors.lastName && (
                           <p className="mt-1 text-sm text-red-400 font-sans">{errors.lastName.message}</p>
@@ -169,7 +172,27 @@ const RSVPSection = () => {
                     </div>
                   </div>
 
-                  <div className="space-y-2">
+                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                    <div className="space-y-2">
+                      <label className="block text-sm font-semibold text-gray-200 font-sans">
+                        Phone Number *
+                      </label>
+                      <div className="relative">
+                        <TbPhoneCall className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+                        <input
+                          {...register('phone', { required: 'Phone number is required' })}
+                          placeholder="Enter your phone number"
+                          className={`w-full pl-12 pr-4 py-4 text-base text-white bg-slate-700/50 border rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 font-sans ${errors.phone
+                              ? 'border-red-500 focus:border-red-500'
+                              : 'border-cyan-400/20 hover:border-cyan-400/40 focus:border-cyan-400'
+                            }`}
+                        />
+                        {errors.phone && (
+                          <p className="mt-1 text-sm text-red-400 font-sans">{errors.phone.message}</p>
+                        )}
+                      </div>
+                    </div>
+                    <div className="space-y-2">
                     <label className="block text-sm font-semibold text-gray-200 font-sans">
                       Work Email *
                     </label>
@@ -185,15 +208,15 @@ const RSVPSection = () => {
                         })}
                         type="email"
                         placeholder="Enter your email"
-                        className={`w-full pl-12 pr-4 py-4 text-base text-white bg-slate-700/50 border rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 font-sans ${
-                          errors.email 
-                            ? 'border-red-500 focus:border-red-500' 
+                        className={`w-full pl-12 pr-4 py-4 text-base text-white bg-slate-700/50 border rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 font-sans ${errors.email
+                            ? 'border-red-500 focus:border-red-500'
                             : 'border-cyan-400/20 hover:border-cyan-400/40 focus:border-cyan-400'
-                        }`}
+                          }`}
                       />
                       {errors.email && (
                         <p className="mt-1 text-sm text-red-400 font-sans">{errors.email.message}</p>
                       )}
+                    </div>
                     </div>
                   </div>
 
@@ -206,11 +229,10 @@ const RSVPSection = () => {
                       <input
                         {...register('company', { required: 'Company is required' })}
                         placeholder="Enter your company"
-                        className={`w-full pl-12 pr-4 py-4 text-base text-white bg-slate-700/50 border rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 font-sans ${
-                          errors.company 
-                            ? 'border-red-500 focus:border-red-500' 
+                        className={`w-full pl-12 pr-4 py-4 text-base text-white bg-slate-700/50 border rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 font-sans ${errors.company
+                            ? 'border-red-500 focus:border-red-500'
                             : 'border-cyan-400/20 hover:border-cyan-400/40 focus:border-cyan-400'
-                        }`}
+                          }`}
                       />
                       {errors.company && (
                         <p className="mt-1 text-sm text-red-400 font-sans">{errors.company.message}</p>
@@ -227,11 +249,10 @@ const RSVPSection = () => {
                       <input
                         {...register('title', { required: 'Title is required' })}
                         placeholder="Enter your title"
-                        className={`w-full pl-12 pr-4 py-4 text-base text-white bg-slate-700/50 border rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 font-sans ${
-                          errors.title 
-                            ? 'border-red-500 focus:border-red-500' 
+                        className={`w-full pl-12 pr-4 py-4 text-base text-white bg-slate-700/50 border rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 font-sans ${errors.title
+                            ? 'border-red-500 focus:border-red-500'
                             : 'border-cyan-400/20 hover:border-cyan-400/40 focus:border-cyan-400'
-                        }`}
+                          }`}
                       />
                       {errors.title && (
                         <p className="mt-1 text-sm text-red-400 font-sans">{errors.title.message}</p>
@@ -262,11 +283,10 @@ const RSVPSection = () => {
                   <button
                     type="submit"
                     disabled={isPending}
-                    className={`w-full py-4 px-6 text-base font-semibold rounded-lg transition-all duration-200 font-sans ${
-                      isPending
+                    className={`w-full py-4 px-6 text-base font-semibold rounded-lg transition-all duration-200 font-sans ${isPending
                         ? 'bg-gray-600 text-gray-300 cursor-not-allowed opacity-60'
                         : 'bg-white text-dark-800 shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98]'
-                    }`}
+                      }`}
                   >
                     {isPending ? (
                       <span className="flex items-center justify-center gap-3">
